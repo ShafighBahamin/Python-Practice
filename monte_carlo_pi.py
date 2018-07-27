@@ -37,9 +37,13 @@ def point_in_square():
     
 
 def main():
-    for j in range(0, 200):
+    # increase these two vars to decrease error
+    first_range = 200
+    second_range = 200
+    
+    for j in range(0, first_range):
         threads_arr = []
-        for i in range(1, 200):
+        for i in range(1, second_range):
             threads_arr.append(threads(i, "thread"+str(i), i))
         for t in threads_arr:
             t.start()
