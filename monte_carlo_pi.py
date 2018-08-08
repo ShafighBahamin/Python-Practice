@@ -50,6 +50,7 @@ def main():
         for t in threads_arr:
             t.join()
     pi = 4.0 * float(within_radius)/total_hits
+    print pi
     return pi
 if __name__ == "__main__":
     main()
